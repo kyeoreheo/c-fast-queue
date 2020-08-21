@@ -13,21 +13,32 @@ int main()
 	for(int i = 0; i < 10; i++)
 	{
 		myQueue.enqueue(10+i*10);
-		myQueue.info();
 	}
 
+	cout << "dequeue()" << endl;
 	myQueue.dequeue();
-	myQueue.dequeue();
-	myQueue.enqueue(999);
-	myQueue.enqueue(777);
-	myQueue.enqueue(1010);
+	myQueue.info();
 
-	int aa = 10;
-	cout<<"AT: "<<myQueue.at(aa)<<endl;
- 	myQueue.info();
- 	myQueue.shrink_to_fit();
- 	cout<<myQueue.tail()<<endl;
- 	myQueue.info();
+	cout << "dequeue()" << endl;
+	myQueue.dequeue();
+	myQueue.info();
+
+	cout << "enqueue(111)" << endl;
+	myQueue.enqueue(111);
+	myQueue.info();
+
+	cout << "enqueue(222)" << endl;
+	myQueue.enqueue(222);
+	myQueue.info();
+
+	myQueue.dequeue();
+	cout << "dequeue()" << endl;
+	myQueue.dequeue();
+	myQueue.info();
+
+	cout << "enqueue(333)" << endl;
+	myQueue.enqueue(333);
+	myQueue.info();
 
 	return 0;
 }
