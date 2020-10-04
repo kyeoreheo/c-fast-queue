@@ -26,29 +26,23 @@ void Fast_queue<T>::enqueue(const T& inputT)
 		first = myVector_.begin();
 		last = myVector_.begin();
 		*first = inputT;
-		last++;
-		itemCount++;
 	}
 	else if (itemCount == myVector_.size()) //when we try to add when it is full
 	{
 		resizeVector();
 		*last = inputT;
-		last++;
-		itemCount++;
 	}
 	else if(itemCount < myVector_.size() && (last == myVector_.end()))
 	{
 		last = myVector_.begin();
 		*last = inputT;
-		last++;
-		itemCount++;
 	}
 	else  //regular add
 	{
 		*last = inputT;
-		last++;
-		itemCount++;
 	}
+	last++;
+	itemCount++;
 }
 
 template<typename T>
